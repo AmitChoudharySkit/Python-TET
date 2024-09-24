@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Login For Ecommerce Application</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+
+<div class="login-form">
+  <form method = "post" action='login'>
+    {% csrf_token %}
+    <h1>Login</h1>
+    <div class="content">
+      <div class="input-field">
+        <input type="text" placeholder="Username" name="Username" autocomplete="nope">
+      </div>
+      <div class="input-field">
+        <input type="password" placeholder="Password" name="Password" autocomplete="new-password">
+    <div class="action">
+      <button>Login</button>
+      {% comment %} <button>Sign in</button> {% endcomment %}
+    </div>
+  </form>
+</div>
+  {% comment %} <script >
+    let form = document.querySelecter('form');
+
+    form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    return false;
+    });
+  </script> {% endcomment %}
+
+</body>
+</html>
